@@ -7,6 +7,7 @@ Installation
 Before install, you need to get access to the private repository "https://github.com/tradingview/charting_library":
 https://tradingview.com/HTML5-stock-forex-bitcoin-charting-library/
 ~~~
+git clone https://github.com/tradingview/charting_library.git vendor/tradingview/charting_library/
 composer require trendy-tech/yii2-tradingview-widget dev-master
 ~~~
 

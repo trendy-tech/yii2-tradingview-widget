@@ -15,18 +15,11 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "tradingview/charting_library": "*"
+        "php": ">=5.4.0"
     },
     "autoload": {
         "psr-4": {
             "TrendyTech\\": ""
         }
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/tradingview/charting_library"
-        }
-    ]
+    }
 }
