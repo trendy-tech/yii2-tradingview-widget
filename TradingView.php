@@ -49,8 +49,7 @@ class TradingView extends Widget
 
         // merge options with default values
         $defaultOptions = [
-            'container_id' => $this->id,
-            'library_path' => "charting_library/"
+            'container_id' => $this->id
         ];
         $this->options = ArrayHelper::merge($defaultOptions, $this->options);
 
@@ -65,7 +64,9 @@ class TradingView extends Widget
     protected function registerAssets()
     {
         // register the necessary script files
-        TradingViewAsset::register($this->view)->withScripts($this->scripts);
+        $bundle = TradingViewAsset::register($this->view)->withScripts($this->scripts);
+        
+        $this->options['library_path'] = $bundle->baseUrl . '/charting_library/';
 
         // prepare and register JavaScript code block
         $jsOptions = Json::encode($this->options);
