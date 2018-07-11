@@ -43,7 +43,7 @@ class TradingView extends Widget
         }
         
         // UDF Datafeed
-        if (strpos($this->options['datafeed'], 'UDFCompatibleDatafeed') !== false) {
+        if (isset($this->options['datafeed']) && strpos($this->options['datafeed'], 'UDFCompatibleDatafeed') !== false) {
             $this->scripts[] = 'datafeeds/udf/dist/polyfills';
             $this->scripts[] = 'datafeeds/udf/dist/bundle';
         }
