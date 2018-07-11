@@ -11,6 +11,10 @@ use yii\base\Widget;
 
 /**
  * Class TradingView
+ * 
+ * @author Artem Sinkov <ceo@trendytech.ru>
+ * @link https://github.com/trendy-tech/yii2-tradingview-widget
+ * @license https://github.com/trendy-tech/yii2-tradingview-widget/blob/master/LICENSE.md BSD 3-Clause License
  */
 class TradingView extends Widget
 {
@@ -38,7 +42,7 @@ class TradingView extends Widget
             $this->options = Json::decode($this->options);
         }
         
-        if (strpos($this->options['datafeed'], 'UDFCompatibleDatafeed' !== false)) {
+        if (strpos($this->options['datafeed'], 'UDFCompatibleDatafeed') !== false) {
             $this->scripts[] = 'datafeeds/udf/dist/polyfills';
             $this->scripts[] = 'datafeeds/udf/dist/bundle';
         }

@@ -6,6 +6,10 @@ use yii\web\AssetBundle;
 
 /**
  * Class TradingViewAsset
+ * 
+ * @author Artem Sinkov <ceo@trendytech.ru>
+ * @link https://github.com/trendy-tech/yii2-tradingview-widget
+ * @license https://github.com/trendy-tech/yii2-tradingview-widget/blob/master/LICENSE.md BSD 3-Clause License
  */
 class TradingViewAsset extends AssetBundle
 {

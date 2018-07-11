@@ -18,19 +18,21 @@ use TrendyTech\TradingView;
 use yii\web\JsExpression;
 
 echo TradingView::widget([
-    //'debug' => true, // uncomment this line to see Library errors and warnings in the console
-    'fullscreen' => true,
-    'symbol' => 'AAPL',
-    'interval' => 'D',
-    'datafeed' => new JsExpression('new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com")'),
-    'locale' => 'en',
-    //	Regression Trend-related functionality is not implemented yet, so it's hidden for a while
-    'drawings_access' => ['type' => 'black', 'tools' => ['name' => 'Regression Trend']],
-    'disabled_features' => ['use_localstorage_for_settings'],
-    'enabled_features' => ['study_templates'],
-    'charts_storage_url' => 'http://saveload.tradingview.com',
-    'charts_storage_api_version' => '1.1',
-    'client_id' => 'tradingview.com',
-    'user_id' => 'public_user_id'
+    'options' => [
+        //'debug' => true, // uncomment this line to see Library errors and warnings in the console
+        'fullscreen' => true,
+        'symbol' => 'AAPL',
+        'interval' => 'D',
+        'datafeed' => new JsExpression('new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com")'),
+        'locale' => 'en',
+        //	Regression Trend-related functionality is not implemented yet, so it's hidden for a while
+        'drawings_access' => ['type' => 'black', 'tools' => ['name' => 'Regression Trend']],
+        'disabled_features' => ['use_localstorage_for_settings'],
+        'enabled_features' => ['study_templates'],
+        'charts_storage_url' => 'http://saveload.tradingview.com',
+        'charts_storage_api_version' => '1.1',
+        'client_id' => 'tradingview.com',
+        'user_id' => 'public_user_id'
+    ]
 ]);
 ~~~
