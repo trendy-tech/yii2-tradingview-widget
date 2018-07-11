@@ -26,7 +26,7 @@ echo TradingView::widget([
         'datafeed' => new JsExpression('new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com")'),
         'locale' => 'en',
         //	Regression Trend-related functionality is not implemented yet, so it's hidden for a while
-        'drawings_access' => ['type' => 'black', 'tools' => ['name' => 'Regression Trend']],
+        'drawings_access' => ['type' => 'black', 'tools' => [['name' => 'Regression Trend']]],
         'disabled_features' => ['use_localstorage_for_settings'],
         'enabled_features' => ['study_templates'],
         'charts_storage_url' => 'http://saveload.tradingview.com',
