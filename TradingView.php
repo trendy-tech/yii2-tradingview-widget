@@ -71,7 +71,7 @@ class TradingView extends Widget
 
         // prepare and register JavaScript code block
         $jsOptions = Json::encode($this->options);
-        $js = "var widget = window.tvWidget = new TradingView.widget($jsOptions);";
+        $js = "var widget = new TradingView.widget($jsOptions);";
         $key = __CLASS__ . '#' . $this->id;
         
         $this->view->registerJs($js, View::POS_READY, $key);
